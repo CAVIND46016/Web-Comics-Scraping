@@ -19,7 +19,7 @@ sys.setrecursionlimit(10**5)
 # Bizarro - Daily Comic
 COMIC_URL = "https://bizarro.com/daily-comic/"
 # COMIC_START_DATE >= 1996-02-04
-COMIC_START_DATE = datetime.date(2018, 7, 1)
+COMIC_START_DATE = datetime.date(2018, 7, 15)
 COMIC_END_DATE = datetime.datetime.now().date()
 
 DIRNAME = os.path.dirname(__file__)
@@ -53,7 +53,7 @@ def scrape(pdf):
         
         soup = BeautifulSoup(BROWSER.page_source, "html.parser")
         comic_image = soup.find("img", attrs={"id":"kfs-comic"})
-        img_name = os.path.join(IMAGE_REPOSITORY, "img{}.png".format(idx))
+        img_name = os.path.join(IMAGE_REPOSITORY, "biz{}.png".format(idx))
         urllib2.urlretrieve(comic_image['src'], img_name)
         pdf.add_page()
         pdf.image(img_name, 0, 0, 210, 297)
