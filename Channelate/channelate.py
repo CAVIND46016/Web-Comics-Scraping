@@ -22,6 +22,9 @@ OPENER = urllib2.URLopener()
 OPENER.addheaders = [('User-Agent', REQUEST_HEADER['User-Agent'])]
 
 def get_soup(web_url):
+    """
+    Returns the soup of the url page provided.
+    """
     try:
         req = urllib2.Request(web_url, headers=REQUEST_HEADER)
         page = urllib2.urlopen(req, timeout=200).read()
