@@ -37,10 +37,10 @@ def scrape(pdf):
     """
     Web scraping logic
     """
-    _date = COMIC_START_DATE
+    date_ = COMIC_START_DATE
     idx = 1
-    while _date <= COMIC_END_DATE:
-        web_url = "{}?fd={}".format(COMIC_URL, _date)
+    while date_ <= COMIC_END_DATE:
+        web_url = "{}?fd={}".format(COMIC_URL, date_)
         try:
             BROWSER.set_page_load_timeout(200)
             BROWSER.get(web_url)
@@ -57,8 +57,8 @@ def scrape(pdf):
         urllib2.urlretrieve(comic_image['src'], img_name)
         pdf.add_page()
         pdf.image(img_name, 0, 0, 210, 297)
-        print("Page no: {} - {}".format(idx, _date))
-        _date += datetime.timedelta(days=1)
+        print("Page no: {} - {}".format(idx, date_))
+        date_ += datetime.timedelta(days=1)
         idx += 1
     
     BROWSER.quit()
