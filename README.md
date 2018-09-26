@@ -1,6 +1,8 @@
 # Web-Comics-Scraping
 Web scraping of web comic sites listed at https://automatetheboringstuff.com/list-of-web-comics.html by [Al Sweigart](https://twitter.com/AlSweigart).
 <br>
+Additionally, this repository also includes Dilbert by Scott Adams.
+<br>
 <br>
 Support the author by purchasing the print/ebook bundle from [No Starch Press](https://www.nostarch.com/automatestuff) or separately on [Amazon](http://www.amazon.com/gp/product/1593275994/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1593275994&linkCode=as2&tag=playwithpyth-20&linkId=HDM7V3T6RHC5VVN4).
 
